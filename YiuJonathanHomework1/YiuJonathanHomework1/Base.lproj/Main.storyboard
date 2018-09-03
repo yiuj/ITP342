@@ -18,26 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jonathan Yiu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-Zi-eKd" userLabel="Title">
-                                <rect key="frame" x="16" y="20" width="343" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="52"/>
-                                <color key="textColor" red="0.99302969246068507" green="1" blue="0.24580155697604722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90b" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-i0-Faf" userLabel="Picture">
-                                <rect key="frame" x="32" y="102" width="311" height="359"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My major is Computer Science. I am here to learn how to develop iOS applications." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xuv-rq-daq" userLabel="Text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="My major is Computer Science. I am here to learn how to develop iOS applications." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xuv-rq-daq" userLabel="Text">
                                 <rect key="frame" x="15" y="424" width="343" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N3t-c9-Suy">
+                                <rect key="frame" x="38" y="20" width="299" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-5U-ZCI">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fKF-St-wLs">
+                                                <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1If-Ha-zFx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-QA-6La">
+                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vf1-wX-Cb1">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Jonathan Yiu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-Zi-eKd" userLabel="Title">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="74"/>
+                                                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="52"/>
+                                                                                <color key="textColor" red="0.99302969246068507" green="1" blue="0.24580155697604722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <variation key="heightClass=compact" axis="horizontal"/>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="jy" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-i0-Faf" userLabel="Picture">
+                                <rect key="frame" x="32" y="102" width="311" height="324"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.56690816508522235" green="0.80676311843672899" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3wW-Zi-eKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KU5-cV-1b8"/>
+                            <constraint firstItem="Xuv-rq-daq" firstAttribute="top" secondItem="iN6-i0-Faf" secondAttribute="bottom" constant="-37" id="PSR-2w-4sE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3wW-Zi-eKd" secondAttribute="trailing" constant="38" id="lM7-IA-my9"/>
+                            <constraint firstItem="3wW-Zi-eKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="mQN-M1-At9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xuv-rq-daq" secondAttribute="bottom" constant="20" id="mcl-NW-UKv"/>
+                            <constraint firstItem="iN6-i0-Faf" firstAttribute="top" secondItem="3wW-Zi-eKd" secondAttribute="bottom" constant="8" id="uMB-dO-FTF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -47,6 +84,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="90b" width="346" height="450"/>
+        <image name="jy" width="640" height="640"/>
     </resources>
 </document>
