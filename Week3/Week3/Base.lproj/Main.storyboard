@@ -28,9 +28,12 @@
                                 <state key="normal" title="Welcome">
                                     <color key="titleColor" red="0.0" green="0.071446268420761072" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8TO-kG-Syx"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-nF-R3L" userLabel="NameTextField">
-                                <rect key="frame" x="20" y="149" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWK-nF-R3L" userLabel="NameTextField">
+                                <rect key="frame" x="20" y="208.5" width="335" height="70"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -42,11 +45,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pu-eu-8Jd" userLabel="BackgroundButton">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backgroundButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfD-ue-Ody"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60842592742415236" green="1" blue="0.86093735416178951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eZ6-Hd-7UK" firstAttribute="top" secondItem="cy4-id-LzO" secondAttribute="bottom" constant="20" id="2Re-m1-TZG"/>
                             <constraint firstItem="cy4-id-LzO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3vU-6f-3OQ"/>
+                            <constraint firstItem="cy4-id-LzO" firstAttribute="top" secondItem="DWK-nF-R3L" secondAttribute="bottom" constant="20" id="7YW-XY-OB7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eZ6-Hd-7UK" secondAttribute="bottom" constant="20" id="Asz-Wr-cjS"/>
                             <constraint firstItem="cy4-id-LzO" firstAttribute="leading" secondItem="DWK-nF-R3L" secondAttribute="leading" id="EPK-bO-Kna"/>
                             <constraint firstItem="eZ6-Hd-7UK" firstAttribute="leading" secondItem="cy4-id-LzO" secondAttribute="leading" id="FvO-Pu-nSI"/>
@@ -61,6 +72,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="eZ6-Hd-7UK" id="UfJ-cU-0ja"/>
+                        <outlet property="nameTF" destination="DWK-nF-R3L" id="b1b-YG-7Md"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
