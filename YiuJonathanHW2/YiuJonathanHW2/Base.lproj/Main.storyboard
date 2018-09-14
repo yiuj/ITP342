@@ -29,6 +29,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="JsD-cd-U6y"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-Nb-Iwy">
                                 <rect key="frame" x="16" y="605" width="343" height="42"/>
@@ -37,8 +40,11 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetMessageLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n0c-ix-zrZ"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYo-h7-gfT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYo-h7-gfT">
                                 <rect key="frame" x="45" y="430" width="285" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="l6i-Rh-9Cc"/>
@@ -48,6 +54,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKD-PN-rGl">
+                                <rect key="frame" x="125" y="122" width="125" height="125"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="60d-fu-XKB"/>
+                                    <constraint firstAttribute="height" constant="125" id="NtS-dV-Tkn"/>
+                                </constraints>
+                                <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="catButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZQ-JL-JBu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APu-bv-U4r">
+                                <rect key="frame" x="125" y="263" width="125" height="125"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="hca-oo-2Mg"/>
+                                    <constraint firstAttribute="height" constant="125" id="zAV-0O-XwN"/>
+                                </constraints>
+                                <state key="normal" image="dog"/>
+                                <connections>
+                                    <action selector="dogButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4W0-IO-1by"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4691319332644015" green="1" blue="0.81232599635116542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,20 +85,32 @@
                             <constraint firstItem="IAI-Qq-Ri2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="8uO-TS-MGJ"/>
                             <constraint firstItem="V7F-Nb-Iwy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CMf-E8-Pfa"/>
                             <constraint firstItem="lYo-h7-gfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dca-q5-ngS"/>
+                            <constraint firstItem="APu-bv-U4r" firstAttribute="top" secondItem="YKD-PN-rGl" secondAttribute="bottom" constant="16" id="IeC-Rc-x0H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bz9-n9-Lw8" secondAttribute="trailing" constant="16" id="Oh7-6a-iDV"/>
                             <constraint firstItem="bz9-n9-Lw8" firstAttribute="top" secondItem="IAI-Qq-Ri2" secondAttribute="bottom" constant="8" id="PlD-pX-hRc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IAI-Qq-Ri2" secondAttribute="trailing" constant="45" id="WHf-1m-3Gp"/>
                             <constraint firstItem="bz9-n9-Lw8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="X5x-XW-5CN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V7F-Nb-Iwy" secondAttribute="trailing" constant="16" id="gWb-Ug-UMg"/>
+                            <constraint firstItem="YKD-PN-rGl" firstAttribute="top" secondItem="bz9-n9-Lw8" secondAttribute="bottom" constant="17" id="gtI-hx-bGw"/>
                             <constraint firstItem="V7F-Nb-Iwy" firstAttribute="top" secondItem="lYo-h7-gfT" secondAttribute="bottom" constant="25" id="ky3-8c-QXu"/>
+                            <constraint firstItem="APu-bv-U4r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lr9-bk-ejx"/>
                             <constraint firstItem="IAI-Qq-Ri2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="nom-nK-whJ"/>
+                            <constraint firstItem="YKD-PN-rGl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x21-KD-vKa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="lYo-h7-gfT" id="263-zU-vh0"/>
+                        <outlet property="nameTF" destination="bz9-n9-Lw8" id="P8c-i6-PJi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="900" height="900"/>
+        <image name="dog" width="900" height="900"/>
+    </resources>
 </document>

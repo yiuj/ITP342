@@ -9,7 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBAction func textFieldExit(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func catButtonPressed(_ sender: Any) {
+        if (self.nameTF.text?.count)! > 0 {
+            self.messageLabel.text = "Bad choice, \(self.nameTF.text!)! Cats are scary!"
+        } else {
+            messageLabel.text = "Bad choice! Cats are scary!"
+        }
+    }
+    
+    @IBAction func dogButtonPressed(_ sender: Any) {
+        if (self.nameTF.text?.count)! > 0 {
+            self.messageLabel.text = "Good choice, \(self.nameTF.text!)! Dogs are the best!"
+        } else {
+            messageLabel.text = "Good choice! Dogs are the best!"
+        }
+    }
+    
+    @IBAction func resetMessageLabel(_ sender: Any) {
+        messageLabel.text = ""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
