@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         sender.resignFirstResponder()
     }
     
+    @IBAction func backgroundButtonExit(_ sender: UIButton) {
+        self.nameTF.resignFirstResponder()
+    }
+    
     @IBAction func catButtonPressed(_ sender: Any) {
         if (self.nameTF.text?.count)! > 0 {
             self.messageLabel.text = "Bad choice, \(self.nameTF.text!)! Cats are scary!"
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetMessageLabel(_ sender: Any) {
         messageLabel.text = ""
+        nameTF.text = ""
     }
     override func viewDidLoad() {
         super.viewDidLoad()
