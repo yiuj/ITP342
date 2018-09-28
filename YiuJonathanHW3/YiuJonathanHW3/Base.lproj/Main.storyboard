@@ -57,6 +57,9 @@
                                             <segment title="9.0"/>
                                             <segment title="9.5"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="taxPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="28n-gx-999"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include Tax for Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rw-wz-wTu">
                                         <rect key="frame" x="64" y="114" width="180" height="28"/>
@@ -72,9 +75,15 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G2v-9q-XIn">
                                         <rect key="frame" x="278" y="114" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sdq-pe-ZQe"/>
+                                        </connections>
                                     </switch>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="A2j-Ua-W2n">
                                         <rect key="frame" x="106" y="158" width="223" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FgU-ST-CBI"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Even Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-4C-YN8">
                                         <rect key="frame" x="16" y="202" width="98.5" height="27.5"/>
@@ -247,6 +256,7 @@
                         <outlet property="taxLabel" destination="nHb-xj-7B1" id="I0N-nb-Imj"/>
                         <outlet property="taxSegmented" destination="ckz-4Z-h8d" id="K3I-Wn-MZc"/>
                         <outlet property="tipLabel" destination="s2q-Io-sj9" id="qt8-1Y-Gx1"/>
+                        <outlet property="tipPercentLabel" destination="Tx0-RH-8r9" id="z8X-fP-VGm"/>
                         <outlet property="tipSlider" destination="A2j-Ua-W2n" id="pFQ-8E-dlg"/>
                         <outlet property="totalPerPersonLabel" destination="Cme-5w-ufa" id="jje-Uk-z8T"/>
                         <outlet property="totalWithTipLabel" destination="uQy-aG-21c" id="hOF-eB-u8w"/>
