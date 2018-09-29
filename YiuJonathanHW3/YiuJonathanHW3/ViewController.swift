@@ -60,6 +60,12 @@ class ViewController: UIViewController {
         updateValues()
     }
     
+    @IBAction func stepperChanged(_ sender: UIStepper) {
+        let stepperNum = Int(sender.value)
+        self.splitLabel.text = "\(stepperNum)"
+        updateValues()
+    }
+    
     @IBAction func backgroundButtonExit(_ sender: UIButton) {
         self.numberTextField.resignFirstResponder()
         updateValues()
@@ -94,6 +100,45 @@ class ViewController: UIViewController {
         //updating tip
         tip = tipPercent * subtotal!
         self.tipLabel.text = "$\(String(format: "%.2f", tip!))"
+        
+        //updating total with tip
+        totalWTip = tax! + subtotal! + tip!
+        self.totalWithTipLabel.text = "$\(String(format: "%.2f", totalWTip!))"
+        
+        //updating total per person
+        let evenSplit = Float(splitLabel.text!)
+        totalPPerson = totalWTip!/evenSplit!
+        self.totalPerPersonLabel.text = "$\(String(format: "%.2f", totalPPerson!))"
+    }
+    
+    @IBAction func clearAllPressed(_ sender: UIButton) {
+        showActionSheet()
+    }
+    
+    func showActionSheet() {
+        let actionSheet = UIAlertController(title: "Clear All Values", message: "Are you sure you want to clear all values?", preferredStyle: .actionSheet)
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let clearAll = UIAlertAction(title: "Clear All", style: .default) { action in
+            self.resetValues()
+        }
+        clearAll.setValue(UIColor.red, forKey: "titleTextColor")
+        
+        actionSheet.addAction(cancel)
+        actionSheet.addAction(clearAll)
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func resetValues() {
+        numberTextField.text = ""
+        taxSegmented.selectedSegmentIndex = 0
+        tipSlider.setValue(15, animated: true)
+        self.tipPercentLabel.text = "15%"
+        splitStepper.value = 1
+        splitLabel.text = "1"
+        updateValues()
     }
     
     override func viewDidLoad() {

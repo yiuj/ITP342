@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction func catButtonPressed(_ sender: Any) {
         if (self.nameTF.text?.count)! > 0 {
-            self.messageLabel.text = "Bad choice, \(self.nameTF.text!)! Cats are scary!"
+             
         } else {
             messageLabel.text = "Bad choice! Cats are scary!"
         }
