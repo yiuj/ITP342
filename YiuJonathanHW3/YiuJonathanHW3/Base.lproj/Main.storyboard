@@ -253,18 +253,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="billStaticLabel" destination="sDq-nG-4ay" id="z2i-uD-vl6"/>
                         <outlet property="clearAllButton" destination="3C0-7v-XSk" id="3Rq-XC-KVr"/>
+                        <outlet property="evenSplitStaticLabel" destination="zbV-4C-YN8" id="F7f-di-t6o"/>
+                        <outlet property="includeTaxStaticLabel" destination="2rw-wz-wTu" id="geO-ch-UN6"/>
                         <outlet property="includeTaxSwitch" destination="G2v-9q-XIn" id="Bco-dr-am1"/>
                         <outlet property="numberTextField" destination="23R-Gk-0Zf" id="0U9-Ld-5ga"/>
                         <outlet property="splitLabel" destination="XEC-xi-BX6" id="kNh-Py-cn0"/>
                         <outlet property="splitStepper" destination="Npp-w2-TpD" id="gdz-Be-T34"/>
+                        <outlet property="subtotalAmountStaticLabel" destination="WAo-rH-eGs" id="bhd-de-8Yo"/>
                         <outlet property="subtotalLabel" destination="CV5-7N-TPe" id="Icp-t8-Ifc"/>
+                        <outlet property="taxAmountStaticLabel" destination="LE6-BY-AiO" id="V8I-9z-Ty8"/>
                         <outlet property="taxLabel" destination="nHb-xj-7B1" id="I0N-nb-Imj"/>
                         <outlet property="taxSegmented" destination="ckz-4Z-h8d" id="K3I-Wn-MZc"/>
+                        <outlet property="taxStaticLabel" destination="E9Z-xv-0Du" id="7ge-U6-KKn"/>
+                        <outlet property="tipAmountStaticLabel" destination="RG5-Md-fWL" id="Huf-SO-PsA"/>
+                        <outlet property="tipCalculatorLabel" destination="mJh-oM-JeN" id="weL-nT-Ncc"/>
                         <outlet property="tipLabel" destination="s2q-Io-sj9" id="qt8-1Y-Gx1"/>
                         <outlet property="tipPercentLabel" destination="Tx0-RH-8r9" id="z8X-fP-VGm"/>
                         <outlet property="tipSlider" destination="A2j-Ua-W2n" id="pFQ-8E-dlg"/>
+                        <outlet property="totalPPersonStaticLabel" destination="cUA-B3-gDv" id="TGb-6Q-88v"/>
                         <outlet property="totalPerPersonLabel" destination="Cme-5w-ufa" id="jje-Uk-z8T"/>
+                        <outlet property="totalWTipStaticLabel" destination="CiI-fG-MqW" id="cLD-qu-IFT"/>
                         <outlet property="totalWithTipLabel" destination="uQy-aG-21c" id="hOF-eB-u8w"/>
                     </connections>
                 </viewController>

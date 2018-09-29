@@ -9,6 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // static labels
+    @IBOutlet weak var tipCalculatorLabel: UILabel!
+    @IBOutlet weak var billStaticLabel: UILabel!
+    @IBOutlet weak var taxStaticLabel: UILabel!
+    @IBOutlet weak var includeTaxStaticLabel: UILabel!
+    @IBOutlet weak var evenSplitStaticLabel: UILabel!
+    @IBOutlet weak var taxAmountStaticLabel: UILabel!
+    @IBOutlet weak var subtotalAmountStaticLabel: UILabel!
+    @IBOutlet weak var tipAmountStaticLabel: UILabel!
+    @IBOutlet weak var totalWTipStaticLabel: UILabel!
+    @IBOutlet weak var totalPPersonStaticLabel: UILabel!
+    // end static labels
 
     @IBOutlet weak var numberTextField: UITextField!
     
@@ -144,6 +157,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // UI that you can interact with
+        numberTextField.accessibilityIdentifier = HW3AccessibilityIdentifiers.amountTextField
+        taxSegmented.accessibilityIdentifier = HW3AccessibilityIdentifiers.segmentedTax
+        includeTaxSwitch.accessibilityIdentifier = HW3AccessibilityIdentifiers.includeTaxSwitch
+        tipSlider.accessibilityIdentifier = HW3AccessibilityIdentifiers.tipSlider
+        splitStepper.accessibilityIdentifier = HW3AccessibilityIdentifiers.splitStepper
+        clearAllButton.accessibilityIdentifier = HW3AccessibilityIdentifiers.resetButton
+        
+        // Dynamic labels
+        taxLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.taxAmountLabel
+        subtotalLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.subtotalAmountLabel
+        tipLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.tipAmountLabel
+        totalWithTipLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.totalWithTipAmountLabel
+        totalPerPersonLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.totalPerPersonLabel
+        tipPercentLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.sliderLabel
+        splitLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.splitLabel
+        
+        // Static labels
+        tipCalculatorLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.tipCalculaterLabel
+        billStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.billLabel
+        taxStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.segmentedLabel
+        includeTaxStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.includeTaxLabel
+        evenSplitStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.evenSplitLabel
+        taxAmountStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.taxLabel
+        subtotalAmountStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.subtotalLabel
+        tipAmountStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.tipLabel
+        totalWTipStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.totalWithTipLabel
+        totalPPersonStaticLabel.accessibilityIdentifier = HW3AccessibilityIdentifiers.totalPerPersonLabel
     }
 
     override func didReceiveMemoryWarning() {
