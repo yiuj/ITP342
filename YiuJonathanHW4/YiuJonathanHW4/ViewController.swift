@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         firstAnimator.addCompletion { (position) in
             self.messageLabel.text = self.flashcards.randomFlashcard()?.question
             self.messageLabel.textColor = UIColor.black
+            self.messageLabel.font = UIFont(name: "Zapfino", size: 30)
             let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
                 self.fadeInLabel()
             })
@@ -64,7 +65,8 @@ class ViewController: UIViewController {
             let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
             firstAnimator.addCompletion { (position) in
                 self.messageLabel.text = self.flashcards.currentFlashcard()?.answer
-                self.messageLabel.textColor = UIColor.green
+                self.messageLabel.textColor = UIColor.blue
+                self.messageLabel.font = UIFont(name: "Chalkduster", size: 30)
                 let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
                     self.fadeInLabel()
                 })
@@ -78,6 +80,7 @@ class ViewController: UIViewController {
             firstAnimator.addCompletion { (position) in
                 self.messageLabel.text = self.flashcards.currentFlashcard()?.question
                 self.messageLabel.textColor = UIColor.black
+                self.messageLabel.font = UIFont(name: "Zapfino", size: 30)
                 let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
                     self.fadeInLabel()
                 })
@@ -93,6 +96,7 @@ class ViewController: UIViewController {
         firstAnimator.addCompletion { (position) in
             self.messageLabel.text = self.flashcards.nextFlashcard()?.question
             self.messageLabel.textColor = UIColor.black
+            self.messageLabel.font = UIFont(name: "Zapfino", size: 30)
             let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
                 self.fadeInLabel()
             })
@@ -107,6 +111,7 @@ class ViewController: UIViewController {
         firstAnimator.addCompletion { (position) in
             self.messageLabel.text = self.flashcards.previousFlashcard()?.question
             self.messageLabel.textColor = UIColor.black
+            self.messageLabel.font = UIFont(name: "Zapfino", size: 30)
             let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
                 self.fadeInLabel()
             })

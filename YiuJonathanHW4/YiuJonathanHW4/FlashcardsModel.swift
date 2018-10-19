@@ -9,17 +9,18 @@
 import Foundation
 
 class FlashcardsModel: FlashcardsDataModel {
+    static let sharedInstance = FlashcardsModel()
     
     var flashcards: [Flashcard]!
     private(set) var currentIndex: Int!
     
     init() {
         flashcards = []
-        flashcards.append(Flashcard(question: "Question 1", answer: "Answer 1"))
-        flashcards.append(Flashcard(question: "Question 2", answer: "Answer 2"))
-        flashcards.append(Flashcard(question: "Question 3", answer: "Answer 3"))
-        flashcards.append(Flashcard(question: "Question 4", answer: "Answer 4"))
-        flashcards.append(Flashcard(question: "Question 5", answer: "Answer 5"))
+        flashcards.append(Flashcard(question: "Who is the best shooter in NBA history?", answer: "Stephen Curry"))
+        flashcards.append(Flashcard(question: "Is USC better than UCLA?", answer: "Yes"))
+        flashcards.append(Flashcard(question: "The expression “oy vey” comes from what language?", answer: "Yiddish"))
+        flashcards.append(Flashcard(question: "In what year did McDonald’s start serving breakfast with the introduction of the Egg McMuffin?", answer: "1972"))
+        flashcards.append(Flashcard(question: "What is the only mammal that can truly fly?", answer: "The bat"))
         currentIndex = 0
     }
     
@@ -28,7 +29,12 @@ class FlashcardsModel: FlashcardsDataModel {
     }
     
     func randomFlashcard() -> Flashcard? {
-        currentIndex = Int(arc4random_uniform(UInt32(flashcards.count)))
+        var temp: Int!
+        temp = currentIndex
+        while temp == currentIndex {
+            temp = Int(arc4random_uniform(UInt32(flashcards.count)))
+        }
+        currentIndex = temp
         return flashcards[currentIndex]
     }
     
@@ -49,7 +55,7 @@ class FlashcardsModel: FlashcardsDataModel {
         return flashcards[currentIndex]
     }
     
-    internal func previousFlashcard() -> Flashcard? {
+    func previousFlashcard() -> Flashcard? {
         currentIndex! -= 1
         if currentIndex < 0 {
             currentIndex! = flashcards.count - 1

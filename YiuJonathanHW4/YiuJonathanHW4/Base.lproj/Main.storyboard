@@ -18,25 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfN-cK-UCp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-m9-Jdb">
                                 <rect key="frame" x="16" y="60" width="343" height="702"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-m9-Jdb">
-                                <rect key="frame" x="148" y="394" width="79" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.68373010020000002" green="0.85620952210000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EeR-m9-Jdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2UZ-Ey-bn1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PfN-cK-UCp" secondAttribute="trailing" constant="16" id="Mkt-fc-XBL"/>
-                            <constraint firstItem="EeR-m9-Jdb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y0h-ix-p59"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PfN-cK-UCp" secondAttribute="bottom" constant="16" id="eaK-Yn-jJh"/>
-                            <constraint firstItem="PfN-cK-UCp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fDN-NT-LWB"/>
-                            <constraint firstItem="PfN-cK-UCp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="r62-N9-nlC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EeR-m9-Jdb" secondAttribute="bottom" constant="16" id="CRj-pl-PKM"/>
+                            <constraint firstItem="EeR-m9-Jdb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YHh-sI-5da"/>
+                            <constraint firstItem="EeR-m9-Jdb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pos-GK-KFV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EeR-m9-Jdb" secondAttribute="trailing" constant="16" id="xl7-ue-pwC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
