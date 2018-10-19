@@ -45,34 +45,83 @@ class ViewController: UIViewController {
     }
     
     @objc func singleTapRecognized (recognizer: UITapGestureRecognizer) {
-        self.messageLabel.text = flashcards.randomFlashcard()?.question
-        self.messageLabel.textColor = UIColor.black
+        let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
+        firstAnimator.addCompletion { (position) in
+            self.messageLabel.text = self.flashcards.randomFlashcard()?.question
+            self.messageLabel.textColor = UIColor.black
+            let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
+                self.fadeInLabel()
+            })
+            animator.startAnimation()
+        }
+        firstAnimator.startAnimation()
+        
         isQuestion = true
     }
     
     @objc func doubleTapRecognized (recognizer: UITapGestureRecognizer) {
         if isQuestion {
-            self.messageLabel.text = flashcards.currentFlashcard()?.answer
-            self.messageLabel.textColor = UIColor.green
+            let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
+            firstAnimator.addCompletion { (position) in
+                self.messageLabel.text = self.flashcards.currentFlashcard()?.answer
+                self.messageLabel.textColor = UIColor.green
+                let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
+                    self.fadeInLabel()
+                })
+                animator.startAnimation()
+            }
+            firstAnimator.startAnimation()
             isQuestion = false
         }
         else {
-            self.messageLabel.text = flashcards.currentFlashcard()?.question
-            self.messageLabel.textColor = UIColor.black
+            let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
+            firstAnimator.addCompletion { (position) in
+                self.messageLabel.text = self.flashcards.currentFlashcard()?.question
+                self.messageLabel.textColor = UIColor.black
+                let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
+                    self.fadeInLabel()
+                })
+                animator.startAnimation()
+            }
+            firstAnimator.startAnimation()
             isQuestion = true
         }
     }
     
     @objc func swipeLeftRecognized (recognizer: UISwipeGestureRecognizer) {
-        self.messageLabel.text = flashcards.nextFlashcard()?.question
-        self.messageLabel.textColor = UIColor.black
+        let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
+        firstAnimator.addCompletion { (position) in
+            self.messageLabel.text = self.flashcards.nextFlashcard()?.question
+            self.messageLabel.textColor = UIColor.black
+            let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
+                self.fadeInLabel()
+            })
+            animator.startAnimation()
+        }
+        firstAnimator.startAnimation()
         isQuestion = true
     }
     
     @objc func swipeRightRecognized (recognizer: UISwipeGestureRecognizer) {
-        self.messageLabel.text = flashcards.previousFlashcard()?.question
-        self.messageLabel.textColor = UIColor.black
+        let firstAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: fadeOutLabel)
+        firstAnimator.addCompletion { (position) in
+            self.messageLabel.text = self.flashcards.previousFlashcard()?.question
+            self.messageLabel.textColor = UIColor.black
+            let animator = UIViewPropertyAnimator(duration: 1, curve: UIViewAnimationCurve.linear, animations: {() in
+                self.fadeInLabel()
+            })
+            animator.startAnimation()
+        }
+        firstAnimator.startAnimation()
         isQuestion = true
+    }
+    
+    func fadeOutLabel() {
+        messageLabel.alpha = 0
+    }
+    
+    func fadeInLabel() {
+        messageLabel.alpha = 1
     }
 
     override func didReceiveMemoryWarning() {
