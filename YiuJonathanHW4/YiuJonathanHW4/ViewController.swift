@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(doubleTap)
         
         singleTap.require(toFail: doubleTap)
+        
+        // SWIPE LEFT
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeftRecognized))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        // SWIPE RIGHT
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeRightRecognized))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     @objc func singleTapRecognized (recognizer: UITapGestureRecognizer) {
@@ -33,6 +43,14 @@ class ViewController: UIViewController {
     
     @objc func doubleTapRecognized (recognizer: UITapGestureRecognizer) {
         self.messageLabel.text = "Double Tapped!"
+    }
+    
+    @objc func swipeLeftRecognized (recognizer: UISwipeGestureRecognizer) {
+        self.messageLabel.text = "Swiped Left!"
+    }
+    
+    @objc func swipeRightRecognized (recognizer: UISwipeGestureRecognizer) {
+        self.messageLabel.text = "Swiped Right!"
     }
 
     override func didReceiveMemoryWarning() {
