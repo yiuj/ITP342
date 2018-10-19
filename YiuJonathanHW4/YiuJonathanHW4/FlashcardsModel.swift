@@ -14,16 +14,12 @@ class FlashcardsModel: FlashcardsDataModel {
     private(set) var currentIndex: Int!
     
     init() {
-        let f1 = Flashcard(question: "Question 1", answer: "Answer 1")
-        let f2 = Flashcard(question: "Question 2", answer: "Answer 2")
-        let f3 = Flashcard(question: "Question 3", answer: "Answer 3")
-        let f4 = Flashcard(question: "Question 4", answer: "Answer 4")
-        let f5 = Flashcard(question: "Question 5", answer: "Answer 5")
-        flashcards.append(f1)
-        flashcards.append(f2)
-        flashcards.append(f3)
-        flashcards.append(f4)
-        flashcards.append(f5)
+        flashcards = []
+        flashcards.append(Flashcard(question: "Question 1", answer: "Answer 1"))
+        flashcards.append(Flashcard(question: "Question 2", answer: "Answer 2"))
+        flashcards.append(Flashcard(question: "Question 3", answer: "Answer 3"))
+        flashcards.append(Flashcard(question: "Question 4", answer: "Answer 4"))
+        flashcards.append(Flashcard(question: "Question 5", answer: "Answer 5"))
         currentIndex = 0
     }
     
@@ -33,6 +29,10 @@ class FlashcardsModel: FlashcardsDataModel {
     
     func randomFlashcard() -> Flashcard? {
         currentIndex = Int(arc4random_uniform(UInt32(flashcards.count)))
+        return flashcards[currentIndex]
+    }
+    
+    func currentFlashcard() -> Flashcard? {
         return flashcards[currentIndex]
     }
     

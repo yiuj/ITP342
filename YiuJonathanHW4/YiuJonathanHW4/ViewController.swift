@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
+    private var flashcards: FlashcardsModel!
+    
+    private var isQuestion: Bool! = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,22 +39,40 @@ class ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeRightRecognized))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
+        
+        flashcards = FlashcardsModel()
+        self.messageLabel.text = flashcards.flashcard(atIndex: 0)?.question
     }
     
     @objc func singleTapRecognized (recognizer: UITapGestureRecognizer) {
-        self.messageLabel.text = "Single Tapped!"
+        self.messageLabel.text = flashcards.randomFlashcard()?.question
+        self.messageLabel.textColor = UIColor.black
+        isQuestion = true
     }
     
     @objc func doubleTapRecognized (recognizer: UITapGestureRecognizer) {
-        self.messageLabel.text = "Double Tapped!"
+        if isQuestion {
+            self.messageLabel.text = flashcards.currentFlashcard()?.answer
+            self.messageLabel.textColor = UIColor.green
+            isQuestion = false
+        }
+        else {
+            self.messageLabel.text = flashcards.currentFlashcard()?.question
+            self.messageLabel.textColor = UIColor.black
+            isQuestion = true
+        }
     }
     
     @objc func swipeLeftRecognized (recognizer: UISwipeGestureRecognizer) {
-        self.messageLabel.text = "Swiped Left!"
+        self.messageLabel.text = flashcards.nextFlashcard()?.question
+        self.messageLabel.textColor = UIColor.black
+        isQuestion = true
     }
     
     @objc func swipeRightRecognized (recognizer: UISwipeGestureRecognizer) {
-        self.messageLabel.text = "Swiped Right!"
+        self.messageLabel.text = flashcards.previousFlashcard()?.question
+        self.messageLabel.textColor = UIColor.black
+        isQuestion = true
     }
 
     override func didReceiveMemoryWarning() {
