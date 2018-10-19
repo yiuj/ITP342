@@ -14,6 +14,15 @@
 		E2EC17142179F1C6006C9AC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EC17122179F1C6006C9AC6 /* LaunchScreen.storyboard */; };
 		E2EC171F2179F1C6006C9AC6 /* YiuJonathanHW4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC171E2179F1C6006C9AC6 /* YiuJonathanHW4Tests.swift */; };
 		E2EC172A2179F1C6006C9AC6 /* YiuJonathanHW4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17292179F1C6006C9AC6 /* YiuJonathanHW4UITests.swift */; };
+		E2EC173A2179F4DA006C9AC6 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17392179F4DA006C9AC6 /* Flashcard.swift */; };
+		E2EC173B2179F4DA006C9AC6 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17392179F4DA006C9AC6 /* Flashcard.swift */; };
+		E2EC173C2179F4DA006C9AC6 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17392179F4DA006C9AC6 /* Flashcard.swift */; };
+		E2EC173E2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC173D2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift */; };
+		E2EC173F2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC173D2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift */; };
+		E2EC17402179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC173D2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift */; };
+		E2EC17422179F818006C9AC6 /* FlashcardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */; };
+		E2EC17432179F818006C9AC6 /* FlashcardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */; };
+		E2EC17442179F818006C9AC6 /* FlashcardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,9 @@
 		E2EC17252179F1C6006C9AC6 /* YiuJonathanHW4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YiuJonathanHW4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EC17292179F1C6006C9AC6 /* YiuJonathanHW4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YiuJonathanHW4UITests.swift; sourceTree = "<group>"; };
 		E2EC172B2179F1C6006C9AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2EC17392179F4DA006C9AC6 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		E2EC173D2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HW4FlashcardsDataModel.swift; sourceTree = "<group>"; };
+		E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,9 @@
 		E2EC17082179F1C5006C9AC6 /* YiuJonathanHW4 */ = {
 			isa = PBXGroup;
 			children = (
+				E2EC173D2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift */,
+				E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */,
+				E2EC17392179F4DA006C9AC6 /* Flashcard.swift */,
 				E2EC17092179F1C5006C9AC6 /* AppDelegate.swift */,
 				E2EC170B2179F1C5006C9AC6 /* ViewController.swift */,
 				E2EC170D2179F1C5006C9AC6 /* Main.storyboard */,
@@ -256,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EC173E2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */,
 				E2EC170C2179F1C5006C9AC6 /* ViewController.swift in Sources */,
 				E2EC170A2179F1C5006C9AC6 /* AppDelegate.swift in Sources */,
+				E2EC173A2179F4DA006C9AC6 /* Flashcard.swift in Sources */,
+				E2EC17422179F818006C9AC6 /* FlashcardsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EC17432179F818006C9AC6 /* FlashcardsModel.swift in Sources */,
+				E2EC173B2179F4DA006C9AC6 /* Flashcard.swift in Sources */,
 				E2EC171F2179F1C6006C9AC6 /* YiuJonathanHW4Tests.swift in Sources */,
+				E2EC173F2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EC17442179F818006C9AC6 /* FlashcardsModel.swift in Sources */,
+				E2EC173C2179F4DA006C9AC6 /* Flashcard.swift in Sources */,
 				E2EC172A2179F1C6006C9AC6 /* YiuJonathanHW4UITests.swift in Sources */,
+				E2EC17402179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
