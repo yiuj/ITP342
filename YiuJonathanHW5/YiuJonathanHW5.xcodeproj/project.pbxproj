@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E204DC5E21904F8300A9C05E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204DC5D21904F8300A9C05E /* TableViewController.swift */; };
 		E2EC170A2179F1C5006C9AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC17092179F1C5006C9AC6 /* AppDelegate.swift */; };
-		E2EC170C2179F1C5006C9AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC170B2179F1C5006C9AC6 /* ViewController.swift */; };
+		E2EC170C2179F1C5006C9AC6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC170B2179F1C5006C9AC6 /* QuestionViewController.swift */; };
 		E2EC170F2179F1C5006C9AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EC170D2179F1C5006C9AC6 /* Main.storyboard */; };
 		E2EC17112179F1C6006C9AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EC17102179F1C6006C9AC6 /* Assets.xcassets */; };
 		E2EC17142179F1C6006C9AC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EC17122179F1C6006C9AC6 /* LaunchScreen.storyboard */; };
@@ -43,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E204DC5D21904F8300A9C05E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E2EC17062179F1C5006C9AC6 /* YiuJonathanHW5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YiuJonathanHW5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EC17092179F1C5006C9AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2EC170B2179F1C5006C9AC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2EC170B2179F1C5006C9AC6 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		E2EC170E2179F1C5006C9AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2EC17102179F1C6006C9AC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2EC17132179F1C6006C9AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,11 +115,12 @@
 				E2EC17412179F818006C9AC6 /* FlashcardsModel.swift */,
 				E2EC17392179F4DA006C9AC6 /* Flashcard.swift */,
 				E2EC17092179F1C5006C9AC6 /* AppDelegate.swift */,
-				E2EC170B2179F1C5006C9AC6 /* ViewController.swift */,
+				E2EC170B2179F1C5006C9AC6 /* QuestionViewController.swift */,
 				E2EC170D2179F1C5006C9AC6 /* Main.storyboard */,
 				E2EC17102179F1C6006C9AC6 /* Assets.xcassets */,
 				E2EC17122179F1C6006C9AC6 /* LaunchScreen.storyboard */,
 				E2EC17152179F1C6006C9AC6 /* Info.plist */,
+				E204DC5D21904F8300A9C05E /* TableViewController.swift */,
 			);
 			path = YiuJonathanHW5;
 			sourceTree = "<group>";
@@ -272,7 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2EC173E2179F72C006C9AC6 /* HW4FlashcardsDataModel.swift in Sources */,
-				E2EC170C2179F1C5006C9AC6 /* ViewController.swift in Sources */,
+				E204DC5E21904F8300A9C05E /* TableViewController.swift in Sources */,
+				E2EC170C2179F1C5006C9AC6 /* QuestionViewController.swift in Sources */,
 				E2EC170A2179F1C5006C9AC6 /* AppDelegate.swift in Sources */,
 				E2EC173A2179F4DA006C9AC6 /* Flashcard.swift in Sources */,
 				E2EC17422179F818006C9AC6 /* FlashcardsModel.swift in Sources */,
