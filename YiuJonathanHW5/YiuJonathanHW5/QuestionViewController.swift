@@ -40,7 +40,7 @@ class QuestionViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        flashcards = FlashcardsModel()
+        flashcards = flashcardsData.flashcardsModel
         self.messageLabel.text = flashcards.flashcard(atIndex: 0)?.question
     }
     

@@ -30,7 +30,7 @@ class FlashcardsModel: FlashcardsDataModel {
             print(filePath)
             
             let data = try String(contentsOfFile: filePath, encoding: .utf8)
-            let myStrings = data.components(separatedBy: .newlines)
+            let myStrings = data.components(separatedBy: .symbols)
             for line in myStrings {
                 if line.contains(":") {
                     let attributes = line.split(separator: ":")
@@ -38,6 +38,9 @@ class FlashcardsModel: FlashcardsDataModel {
                                               answer: String(attributes[1]))
                     flashcards.append(flashcard)
                 }
+            }
+            if(flashcards.count == 0) {
+                flashcards.append(Flashcard(question: "There are no more flashcards.", answer: "Please add more flashcards."))
             }
         } catch {
             print("Could not read file")
@@ -97,6 +100,9 @@ class FlashcardsModel: FlashcardsDataModel {
         if currentIndex >= flashcards.count {
             currentIndex! = 0
         }
+        if(flashcards.count == 0) {
+            flashcards.append(Flashcard(question: "There are no more flashcards.", answer: "Please add more flashcards."))
+        }
         return flashcards[currentIndex]
     }
     
@@ -105,12 +111,18 @@ class FlashcardsModel: FlashcardsDataModel {
         if currentIndex < 0 {
             currentIndex! = flashcards.count - 1
         }
+        if(flashcards.count == 0) {
+            flashcards.append(Flashcard(question: "There are no more flashcards.", answer: "Please add more flashcards."))
+        }
         return flashcards[currentIndex]
     }
     
     func insert(question: String, answer: String, favorite: Bool) {
         let flash = Flashcard(question: question, answer: answer, isFavorite: favorite)
         flashcards.append(flash)
+        if(flashcard(atIndex: 0)?.question == "There are no more flashcards.") {
+            removeFlashcard(atIndex: 0)
+        }
     }
     
     func insert(question: String, answer: String, favorite: Bool, atIndex: Int) {

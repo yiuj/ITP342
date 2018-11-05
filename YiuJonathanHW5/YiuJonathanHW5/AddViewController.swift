@@ -37,6 +37,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         let touch = event!.allTouches?.first!
         if self.questionTextView.isFirstResponder && touch?.view != self.questionTextView{
             self.questionTextView.resignFirstResponder()
+            self.answerTextField.resignFirstResponder()
         }
         super.touchesBegan(touches, with: event)
     }
@@ -66,7 +67,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        flashcardsData.flashcardsModel.insert(question: questionTextView.text, answer: answerTextField.text!, favorite: false)
+        flashcardsData.flashcardsModel.insert(question: questionTextView.text!, answer: answerTextField.text!, favorite: false)
+        print("saving...")
+        flashcardsData.flashcardsModel.save()
+        
+        questionTextView.text = ""
+        answerTextField.text = ""
+        saveButton.isEnabled = false
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

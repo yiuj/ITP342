@@ -105,13 +105,12 @@
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="fhm-pA-W8n">
                                             <connections>
                                                 <action selector="cancelButtonPressed:" destination="A6h-rX-buA" id="qci-0d-Mcx"/>
-                                                <segue destination="iWH-ru-Zyv" kind="presentation" id="Lgl-ae-AjN"/>
+                                                <segue destination="773-oz-GBy" kind="presentation" id="aBS-Ua-SgB"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="UYC-2R-LT8">
                                             <connections>
                                                 <action selector="saveButtonPressed:" destination="A6h-rX-buA" id="KVn-Bx-l2p"/>
-                                                <segue destination="iWH-ru-Zyv" kind="presentation" id="Frp-f8-9rb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -211,7 +210,4 @@
         <image name="cards" width="25" height="25"/>
         <image name="question" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Lgl-ae-AjN"/>
-    </inferredMetricsTieBreakers>
 </document>

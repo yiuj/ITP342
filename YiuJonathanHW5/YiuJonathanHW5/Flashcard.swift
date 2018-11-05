@@ -24,7 +24,7 @@ struct Flashcard: CustomStringConvertible {
         self.isFavorite = isFavorite
     }
     var description: String {
-        let desc = "\(question!):\(answer!)\n"
+        let desc = "\(question!):\(answer!)+"
         return desc
     }
 }
