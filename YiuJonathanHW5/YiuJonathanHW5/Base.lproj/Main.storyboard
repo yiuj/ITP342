@@ -78,13 +78,84 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Qu9-BL-JRd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YkQ-3b-IqO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YkQ-3b-IqO">
+                            <connections>
+                                <segue destination="A6h-rX-buA" kind="presentation" id="d8v-kG-ryH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WA4-QR-w6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1788" y="678"/>
+        </scene>
+        <!--Add Flashcard-->
+        <scene sceneID="fcj-ba-kpq">
+            <objects>
+                <viewController title="Add Flashcard" id="A6h-rX-buA" customClass="AddViewController" customModule="YiuJonathanHW5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QcQ-ll-z7h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1L-Lv-wEb">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Flashcard" id="mDm-0r-QOy">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fhm-pA-W8n"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="UYC-2R-LT8"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the question and answer for a new flashcard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QG-ex-JFg">
+                                <rect key="frame" x="0.0" y="113" width="375" height="71"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S3M-OU-IrU">
+                                <rect key="frame" x="16" y="204" width="343" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-hi-EVp">
+                                <rect key="frame" x="16" y="732" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="A6h-rX-buA" eventType="editingDidEndOnExit" id="HZY-px-65e"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.68373010020000002" green="0.85620952210000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5QG-ex-JFg" firstAttribute="top" secondItem="d1L-Lv-wEb" secondAttribute="bottom" constant="25" id="1BM-9u-bUe"/>
+                            <constraint firstItem="oHQ-t0-7Wt" firstAttribute="bottom" secondItem="NGd-hi-EVp" secondAttribute="bottom" constant="16" id="218-73-BsD"/>
+                            <constraint firstItem="NGd-hi-EVp" firstAttribute="top" secondItem="S3M-OU-IrU" secondAttribute="bottom" constant="10" id="2wo-zk-qrM"/>
+                            <constraint firstItem="5QG-ex-JFg" firstAttribute="leading" secondItem="oHQ-t0-7Wt" secondAttribute="leading" id="5ZD-nK-ypy"/>
+                            <constraint firstItem="d1L-Lv-wEb" firstAttribute="leading" secondItem="oHQ-t0-7Wt" secondAttribute="leading" id="6de-bC-tQe"/>
+                            <constraint firstItem="d1L-Lv-wEb" firstAttribute="top" secondItem="oHQ-t0-7Wt" secondAttribute="top" id="7WM-sI-dYL"/>
+                            <constraint firstItem="5QG-ex-JFg" firstAttribute="trailing" secondItem="oHQ-t0-7Wt" secondAttribute="trailing" id="ApQ-nK-Sle"/>
+                            <constraint firstItem="NGd-hi-EVp" firstAttribute="leading" secondItem="oHQ-t0-7Wt" secondAttribute="leading" constant="16" id="C3c-wb-zL7"/>
+                            <constraint firstItem="S3M-OU-IrU" firstAttribute="top" secondItem="5QG-ex-JFg" secondAttribute="bottom" constant="20" id="MCk-rH-Ihj"/>
+                            <constraint firstItem="oHQ-t0-7Wt" firstAttribute="trailing" secondItem="NGd-hi-EVp" secondAttribute="trailing" constant="16" id="V7y-sr-wY5"/>
+                            <constraint firstItem="oHQ-t0-7Wt" firstAttribute="trailing" secondItem="S3M-OU-IrU" secondAttribute="trailing" constant="16" id="gcb-JO-Jce"/>
+                            <constraint firstItem="S3M-OU-IrU" firstAttribute="leading" secondItem="oHQ-t0-7Wt" secondAttribute="leading" constant="16" id="pMT-sv-qaE"/>
+                            <constraint firstItem="oHQ-t0-7Wt" firstAttribute="trailing" secondItem="d1L-Lv-wEb" secondAttribute="trailing" id="sQQ-Ha-ZVr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oHQ-t0-7Wt"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextField" destination="NGd-hi-EVp" id="yd5-bo-aRH"/>
+                        <outlet property="promptLabel" destination="5QG-ex-JFg" id="NoF-nw-2JW"/>
+                        <outlet property="questionTextView" destination="S3M-OU-IrU" id="Q92-Vk-Oja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C03-f3-QvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2624.8000000000002" y="677.58620689655174"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vp8-qO-RLb">

@@ -9,13 +9,9 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    private var flashcardsModel: FlashcardsModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        flashcardsModel = FlashcardsModel()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,7 +35,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return flashcardsModel.numberOfFlashcards()
+        return flashcardsData.flashcardsModel.numberOfFlashcards()
     }
 
     
@@ -47,7 +43,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel!.text = flashcardsModel.flashcards[indexPath.row].question
+        cell.textLabel!.text = flashcardsData.flashcardsModel.flashcards[indexPath.row].question
 
         return cell
     }
@@ -66,7 +62,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            flashcardsModel.removeFlashcard(atIndex: indexPath.row)
+            flashcardsData.flashcardsModel.removeFlashcard(atIndex: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
