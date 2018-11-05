@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Flashcard {
+struct Flashcard: CustomStringConvertible {
     var question: String!
     var answer: String!
     var isFavorite: Bool!
@@ -22,5 +22,9 @@ struct Flashcard {
         self.question = question
         self.answer = answer
         self.isFavorite = isFavorite
+    }
+    var description: String {
+        let desc = "\(question!):\(answer!)\n"
+        return desc
     }
 }

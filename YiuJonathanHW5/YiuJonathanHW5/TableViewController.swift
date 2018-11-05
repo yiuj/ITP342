@@ -43,7 +43,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel!.text = flashcardsData.flashcardsModel.flashcards[indexPath.row].question
+        cell.textLabel!.text = flashcardsData.flashcardsModel.flashcards[indexPath.row].question!
 
         return cell
     }
@@ -63,6 +63,7 @@ class TableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             flashcardsData.flashcardsModel.removeFlashcard(atIndex: indexPath.row)
+            flashcardsData.flashcardsModel.save()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

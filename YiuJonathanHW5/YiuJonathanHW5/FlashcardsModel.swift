@@ -14,14 +14,59 @@ class FlashcardsModel: FlashcardsDataModel {
     var flashcards: [Flashcard]!
     private(set) var currentIndex: Int!
     
+    
+    
     init() {
         flashcards = []
-        flashcards.append(Flashcard(question: "Who is the best shooter in NBA history?", answer: "Stephen Curry"))
-        flashcards.append(Flashcard(question: "Is USC better than UCLA?", answer: "Yes"))
-        flashcards.append(Flashcard(question: "The expression “oy vey” comes from what language?", answer: "Yiddish"))
-        flashcards.append(Flashcard(question: "In what year did McDonald’s start serving breakfast with the introduction of the Egg McMuffin?", answer: "1972"))
-        flashcards.append(Flashcard(question: "What is the only mammal that can truly fly?", answer: "The bat"))
+        
         currentIndex = 0
+        
+        
+        do {
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                                            .userDomainMask, true)
+            let documentsDirectory = paths.first!
+            let filePath = "\(documentsDirectory)/Flashcards.plist"
+            print(filePath)
+            
+            let data = try String(contentsOfFile: filePath, encoding: .utf8)
+            let myStrings = data.components(separatedBy: .newlines)
+            for line in myStrings {
+                if line.contains(":") {
+                    let attributes = line.split(separator: ":")
+                    let flashcard = Flashcard(question: String(attributes[0]),
+                                              answer: String(attributes[1]))
+                    flashcards.append(flashcard)
+                }
+            }
+        } catch {
+            print("Could not read file")
+            flashcards.append(Flashcard(question: "Who is the best shooter in NBA history?", answer: "Stephen Curry"))
+            flashcards.append(Flashcard(question: "Is USC better than UCLA?", answer: "Yes"))
+            flashcards.append(Flashcard(question: "The expression “oy vey” comes from what language?", answer: "Yiddish"))
+            flashcards.append(Flashcard(question: "In what year did McDonald’s start serving breakfast with the introduction of the Egg McMuffin?", answer: "1972"))
+            flashcards.append(Flashcard(question: "What is the only mammal that can truly fly?", answer: "The bat"))
+        }
+    }
+    
+    func save() {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                                        .userDomainMask, true)
+        let documentsDirectory = paths.first!
+        let filePath = "\(documentsDirectory)/Flashcards.plist"
+        print(filePath)
+        
+        var cardsString:String = String()
+        for item in flashcards {
+            let desc: String! = item.description
+            cardsString.append(desc)
+        }
+        do {
+            try cardsString.write(toFile: filePath,
+                                   atomically: true, encoding: .utf8)
+        } catch {
+            print("Could not save to file")
+        }
     }
     
     func numberOfFlashcards() -> Int {

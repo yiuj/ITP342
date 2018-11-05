@@ -102,8 +102,18 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Add Flashcard" id="mDm-0r-QOy">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fhm-pA-W8n"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="UYC-2R-LT8"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fhm-pA-W8n">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="A6h-rX-buA" id="qci-0d-Mcx"/>
+                                                <segue destination="iWH-ru-Zyv" kind="presentation" id="Lgl-ae-AjN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="UYC-2R-LT8">
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="A6h-rX-buA" id="KVn-Bx-l2p"/>
+                                                <segue destination="iWH-ru-Zyv" kind="presentation" id="Frp-f8-9rb"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -149,8 +159,10 @@
                     </view>
                     <connections>
                         <outlet property="answerTextField" destination="NGd-hi-EVp" id="yd5-bo-aRH"/>
+                        <outlet property="cancelButton" destination="fhm-pA-W8n" id="xvn-oe-YYO"/>
                         <outlet property="promptLabel" destination="5QG-ex-JFg" id="NoF-nw-2JW"/>
                         <outlet property="questionTextView" destination="S3M-OU-IrU" id="Q92-Vk-Oja"/>
+                        <outlet property="saveButton" destination="UYC-2R-LT8" id="9tF-mj-G3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C03-f3-QvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,4 +211,7 @@
         <image name="cards" width="25" height="25"/>
         <image name="question" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lgl-ae-AjN"/>
+    </inferredMetricsTieBreakers>
 </document>
